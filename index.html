@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Olá, mundo!</title>
+  </head>
+  <body>
+        <div class="container">
+        <h1>Linguagem JavaScript</h1>
+        <h4>Características</h4>
+        <ul>
+            <li>Linguagem de programação;</li>
+            <li>Linguagem interpretada;</li>
+            <li>Originalmente foi criado como uma Linguagem front-end, ou seja ele era interpretado e executado no cliente/navegador;</li>
+            <li>Atualmente ele também pode ser executado no backend através do NodeJS;</li>
+            <li>É case-sensitive</li>
+            <li>Francamente tipada,pode sser tipada se programa com TypeScript</li>
+            <li>Sintaxe similar a linguagem C, Java</li>
+            <li>Orientada a objeto, Estruturada</li>
+        </ul>
+
+        <div class="container">
+            <title>Framework AngularJs</title>
+            <h4>Características</h4>
+            <ul>
+                <li>É um framework JavaScript</li>
+                <li>É um framework front-end</li>
+                <li>Ele é baseado em diretivas para interagir com o HTML</li>
+            </ul>
+        </div>
+        
+        <button onclick="start()" class="btn btn-success">Clique aqui para ver o javascript</button>
+        <hr>
+        <div class="card-colums">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Idade</h5>
+                    <form>
+                        <div class="form-group">
+                            <!-- label faz texto em cima da caixinha -->
+                            <label>Digite sua idade</label>
+                            <!-- placeholder faz texto dentro da caixinha -->
+                            <input id="inputNascimento" class="form-control" placeholder="Digite o ano de nascimento">
+                        </div>
+                        <div class="form-group">
+                            <!-- submit= Transmite / type="button" faz com q não transmita e sim faz oq tem q fazer -->
+                            <button type="button" onclick="CalcularIdade()" class="btn btn-primary">Calcular</button>
+                        </div>
+                    </form>
+                    <div class="card-footer">
+                        <h5 id="h5idade">???</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Criar botões</h5>
+                <form>
+                    <div id="divbotoes" class="form-group">
+                        <button type="button" onclick="CriarBotoes()" class="btn btn-primary">Clique para criar botões</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Calculadora</h5>
+                <form>
+                    <div class="form-group">
+                        <input id="inputN1" class="form-control" placeholder="Valor 1">
+                    </div>
+                    <div class="form-group">
+                        <input id="inputN2" class="form-control" placeholder="Valor 2">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" id="selectoperacao">
+                            <option value="1">Somar</option>
+                            <option value="2">Diminuir</option>
+                            <option value="3">Multiplicar</option>
+                            <option value="4">Divisão</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" onclick="Calcular()" class="btn btn-primary">Clique para Calcular</button>
+                    </div>
+                </form>
+                <div class="card-footer">
+                    <h5 id="h5resultado">???</h5>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card-colums">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Média</h5>
+                    <form>
+                        <div class="form-group">
+                            <input id="nota1" class="form-control" placeholder="Digite a 1º nota">
+                        </div>
+                        <div class="form-group">
+                            <input id="nota2" class="form-control" placeholder="Digite a 2º nota">
+                        </div>
+                        <div class="form-group">
+                            <input id="nota3" class="form-control" placeholder="Digite a 3º nota">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" onclick="Calcularmedia()" class="btn btn-primary">Calcular a média do aluno</button>
+                        </div>
+                    </form>
+                    <div class="card-footer">
+                        <h5 id="h5media">???</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Calcular sua classicação</h5>
+                <form>
+                    <div class="form-group">
+                        <input id="idade_nadador" class="form-control" placeholder="Digite sua idade">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" onclick="idadeN()" class="btn btn-primary">Calcular a classicação</button>
+                    </div>
+                </form>
+                <div class="card-footer">
+                    <h5 id="h5classificação">???</h5>
+                </div>
+            </div>
+        <hr>
+        <div class="card-colums">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Tabuada</h5>
+                    <form>
+                        <div id="tabu" class="form-group">
+                            <button type="button" onclick="Tabuada()" class="btn btn-primary">Calcular tabuada do 7</button>
+                        </div>
+                    </form>
+                    <div class="card-footer">
+                        <h5 id="h5tabuada">???</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <h5 class="card-title">Calcular os metros da casa</h5>
+                    <div class="form-group">
+                        <input id="lar" class="form-control" placeholder="Digite a largura">
+                    </div>
+                    <div class="form-group">
+                        <input id="alt" class="form-control" placeholder="Digite a altura">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" onclick="metros()" class="btn btn-primary">Calcular os metros</button>
+                    </div>
+                </form>
+                <div class="card-footer">
+                    <h5 id="h5metros">???</h5>
+                </div>
+            </div>
+        <hr>
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <h5 class="card-title">Número Negativo, Positivo ou Neutro?</h5>
+                    <div class="form-group">
+                        <input id="Num1" class="form-control" placeholder="Digite a largura">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" onclick="numero()" class="btn btn-primary">Mostrar</button>
+                    </div>
+                </form>
+                <div class="card-footer">
+                    <h5 id="h5show">???</h5>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <h5 class="card-title">Qual é o menor?</h5>
+                    <div class="form-group">
+                        <input id="1num" class="form-control" placeholder="Digite o 1° número">
+                    </div>
+                    <div class="form-group">
+                        <input id="2num" class="form-control" placeholder="Digite o 2° número">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" onclick="numeross()" class="btn btn-primary">Mostrar</button>
+                    </div>
+                </form>
+                <div class="card-footer">
+                    <h5 id="h5shownum">???</h5>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card-colums">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Somas</h5>
+                    <form>
+                        <div class="form-group">
+                            <input id="numero_1" class="form-control" placeholder="Digite o 1º número">
+                        </div>
+                        <div class="form-group">
+                            <input id="numero_2" class="form-control" placeholder="Digite o 2º número">
+                        </div>
+                        <div class="form-group">
+                            <input id="numero_3" class="form-control" placeholder="Digite o 3º número">
+                        </div>
+                        <div class="form-group">
+                            <input id="numero_4" class="form-control" placeholder="Digite o 4º número">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" onclick="calcularsomas()" class="btn btn-primary">Calcular a média do aluno</button>
+                        </div>
+                    </form>
+                    <div class="card-footer">
+                        <h5 id="h5somas">???</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        function start(){
+        var curso ='Sistemas de Informação';
+        var disciplina= 'Fundamentos do desenvolvimento web';
+        console.log(curso);
+        alert(disciplina)
+        }
+
+        function CalcularIdade(){
+            let anoatual=2021;
+            let anonascimento= parseInt(document.getElementById('inputNascimento').value);
+
+            if (Number.isNaN(anonascimento)){
+                document.getElementById('h5idade').innerHTML="Ano Inválido";
+            } 
+            else{
+                let idade=anoatual-anonascimento;
+                document.getElementById('h5idade').innerHTML=idade+" anos";
+            }
+               
+        }
+
+        function CriarBotoes(){
+            for (i=0; i<10; i++){
+                let b= document.createElement('button');
+                b.className='btn btn-danger';
+                b.style='margin: 3px';
+                b.innerHTML=i;
+
+                document.getElementById('divbotoes').appendChild(b);
+            }
+        }
+
+        function Calcular(){
+            let N1= parseFloat(document.getElementById('inputN1').value);
+            let N2= parseFloat(document.getElementById('inputN2').value);
+            let op= parseFloat(document.getElementById('selectoperacao').value);
+
+            if (isNaN(N1) || isNaN(N2)){
+                document.getElementById('h5resultado').innerHTML=" Número(s) Iválido(s)";
+            } 
+            else{
+                let rs;
+
+                switch(op){
+                    case 1:
+                        rs=N1+N2;
+                        break
+                    case 2:
+                        rs=N1-N2;
+                        break
+                    case 3:
+                        rs=N1*N2;
+                        break
+                    case 4:
+                        rs=N1/N2;
+                        break
+                }
+                document.getElementById('h5resultado').innerHTML=rs;
+            }
+               
+        }
+
+        function Calcularmedia(){
+            let nota1 =parseFloat(document.getElementById('nota1').value)
+            let nota2 =parseFloat(document.getElementById('nota2').value)
+            let nota3 =parseFloat(document.getElementById('nota3').value)
+            let aprovaçao=" "
+            
+            if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)){
+                document.getElementById('h5rmedia').innerHTML=" Número(s) Iválido(s)";
+            }
+            else{
+                let media= ((nota1+nota2+nota3)/3);
+
+                if (media>=6){
+                    aprovaçao="Aprovado"
+                    document.getElementById('h5media').innerHTML=aprovaçao;
+                }
+                else{
+                    aprovaçao="Reprovado"
+                    document.getElementById('h5media').innerHTML=aprovaçao;
+                }
+            }
+        }
+
+        function Tabuada(){
+            for (i=1; i<11; i++){
+                let b= document.createElement('button');
+                b.className='btn btn-danger';
+                b.style='margin: 3px';
+                let resultado= 7*i;
+                b.innerHTML="7 x "+ i + "= ", resultado;
+
+                document.getElementById('tabu').appendChild(b);
+            }
+            document.getElementById('h5tabuada').innerHTML="Não consegui colocar os resultados :(";
+        }
+
+        function idadeN(){
+            let idade_nadador=parseInt(document.getElementById('idade_nadador').value)
+            let categoria = ''
+
+            if (isNaN(idade_nadador)){
+                document.getElementById('h5classificação').innerHTML=" Número Iválido";
+            } 
+
+            else{
+                
+                if (idade_nadador >= 5 && idade_nadador <= 7){
+                    categoria = 'infantil';
+                }
+                else if (idade_nadador >= 8 && idade_nadador <= 13){
+                    categoria = 'juvenil';
+                }
+                else if (idade_nadador >= 14 && idade_nadador <= 17){
+                    categoria = 'adolescente';
+                }
+                else if (idade_nadador >= 18){
+                    categoria = 'adulto';
+                }
+                else{
+                    cadegoria='Inválida'
+                }
+            }
+            document.getElementById('h5classificação').innerHTML = categoria;
+        }
+
+        function metros(){
+            let altura=parseInt(document.getElementById('alt').value);
+            let largura=parseInt(document.getElementById('lar').value);
+            let m2= largura * altura;
+            document.getElementById('h5metros').innerHTML = m2+"m2";
+        }
+
+        function numero(){
+            let n1=parseInt(document.getElementById('Num1').value);
+            let RESULTADO=" "
+            if (n1>0){
+                RESULTADO="Valor Positivo"
+            }
+            else if (n1<0){
+                RESULTADO="Valor Negativo"
+            }
+            else{
+                RESULTADO="Neutro"
+            }
+            document.getElementById('h5show').innerHTML=RESULTADO;
+        }
+
+        function numeross(){
+            let n1=parseInt(document.getElementById('1num').value);
+            let n2=parseInt(document.getElementById('2num').value);
+
+            if (n1>n2){
+                document.getElementById('h5shownum').innerHTML="o menor número é "+n2;
+            }
+            else{
+                document.getElementById('h5shownum').innerHTML="o menor número é "+n1;
+            }
+        }
+
+        function calcularsomas(){
+            let n1=parseInt(document.getElementById('numero_1').value);
+            let n2=parseInt(document.getElementById('numero_2').value);
+            let n3=parseInt(document.getElementById('numero_3').value);
+            let n4=parseInt(document.getElementById('numero_4').value);
+            let soma1=n1+n2
+            let soma2=n3+n4
+
+            if (soma1>soma2){
+                document.getElementById('h5somas').innerHTML="o maior valor é "+soma1+" da primeira soma";
+            }
+            else{
+                document.getElementById('h5somas').innerHTML="o maior valor é "+soma2+" da primeira soma";
+            }
+        }
+
+    </script>
+    </body>
+</html>
